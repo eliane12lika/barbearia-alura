@@ -1,0 +1,56 @@
+body{
+	
+}
+
+#banner{
+	width: 100%;
+} /*quando usamos um id (identificador) usamos o # */
+
+.principal{
+	background: #CCCCCC;
+	padding: 30px;
+}
+
+.titulo-principal{
+	padding-left: 20px;
+}
+
+.titulo-centralizado{
+	text-align: center;
+}
+
+
+
+p{
+	text-align: center;
+
+}
+
+#missao{
+	font-size: 20px; text-align: center;
+
+}
+
+em strong{
+	color: #FF0000;
+}
+
+.itens{
+	font-style: italic; /*quando usamos classes (class) usamos o '.' no css*/
+}
+
+.beneficios{
+	background: #FFFFFF;
+	padding: 20px;
+}
+
+
+ul{
+	display:  inline-block; /*mexeu na posição da figura */
+	vertical-align: top; /*itens da lista ficaram ao topo*/
+	width: 20%;
+	height: 15%;
+}
+.imagembeneficios{
+	width: 50%;
+}

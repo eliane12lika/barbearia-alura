@@ -1,56 +1,320 @@
-body{
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+	background: #BBBBBB;
+	padding: 20 0px;
+}
+
+.caixa{
+	position: relative;
+	width: 940px;
+	margin: 0 auto; /*posicionando o cabeçalho*/
+}
+
+nav{
+	position: absolute;
+	top: 110px;
+	right: 0;
+}
+
+nav li {
+	display: inline; /*muda os links de vertical p horizontal*/
+	margin: 0 0 0 15px;/*aumentar os itens entre si*/
+}
+
+nav a {
+	text-transform: uppercase ; /*deixa tudo em letra maiúscula*/
+	color: #000000;
+	font-weight: bold; /*negrito*/
+	font-size: 22px;
+	text-decoration: none; /*retira o sublinhado dos links*/
+
+}
+
+nav a:hover{
+	color: #C78C19;/*muda a cor da palavra qd o mouse está em cima*/
+	text-decoration: underline; /*sublinhado nas palavras qd o mouse
+	está em cima delas*/
+}
+
+.produtos {
+	width: 940px;/*deixa as figuras centralizadas junto c o txto */
+	margin: 0 auto;
+	padding: 50px 0;
+}
+.produtos li{
+	display: inline-block; /*ordena as figuras uma do lado da outra*/
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+	margin: 0 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	/*border-color: #000000;*/ /*COMENTEI TENTADO ACHAR UM ERRO*/
+	border-width: 2px ;
+	border-style: solid; /*declaração da borda*/
+	/*poderia declarar a borda assim também border: 2px #000000 solid;
+	no caso seria apenas uma linha com respectivamente: largura, cor;
+	e estilo da borda*/
+	border-radius: 10px; /*arredonda os cantos da borda*/
+}
+
+.produtos li:hover {
+	border-color: #C78C19;
+}
+
+.produtos li:active {
+	border-color: #088C19; /*mouse pressionado/clicando a borda 
+	muda a cor*/
+}
+
+.produtos li:hover h2 {
+	font-size: 34px; /*qd o mouse está em cima das palavras elas 
+	mudam o tamanho*/
+}
+
+.produtos h2{
+	font-size: 30px;
+	font-weight: bold;	
+}
+
+.produto-descricao{
+	font-size: 18px;
+}
+
+.produto-preco{
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 10px;
+
+}
+
+footer{
+	text-align: center;
+	background: url("bg.jpg");
+	padding: 40px 0;
+	background-color: #000000;
+}
+
+.copyrigth {
+	color: #FFFFFF;
+	font-size: 13px;
+	margin-top: 20px 0 0;
+}
+
+main{
 	
 }
 
-#banner{
-	width: 100%;
-} /*quando usamos um id (identificador) usamos o # */
+form{
+	margin: 40px;
+}
 
-.principal{
-	background: #CCCCCC;
-	padding: 30px;
+form label, form legend{
+	display: block; /*serve para mudar a estrutura do formulario de horizontal pra vertical*/
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+
+.input-padrao{
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px 25px;
+	width: 50%;
+}
+
+.checkbox{
+	margin: 20px;
+}
+
+#copyalura{
+	color: #FFFFFF;
+}
+
+
+.enviar{
+	width: 40%;
+	padding: 15px 0;
+	background-color: orange;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px; /*canto da borda arredondado*/
+	transition: 2s all; /*tempo que o botão enviar demora para mudar de cor*/
+	cursor: pointer; /*muda o ponteiro do cursor para maozinha quando passa em cima do botao enviar*/
+}
+
+.enviar:hover{
+	background: red; /*deixa o botao enviar mudando de cor*/
+	/*transform: scale(1.2); aumenta e diminui o tamanhao do botao enviar qd passa o mouse em cima*/
+	/*transform: rotate(1000deg) scale(3); /*faz o botao enviar virar ate 70 graus e depois voltar ao normal* para funcionar
+	as duas animacoes (transform scale e transform rotate) escreve as duas em uma unica linha como acima*/
+	transform: scale(1.2);
+}
+
+table{
+	margin: 20px 0 40px;
+}
+
+thead{
+	background: #555555;
+	color: white;
+	font-weight: bold;
+}
+
+td, th{
+	border: 1px solid #000000;
+	padding: 8px 15px;
+}
+/*css da pagina inicial*/
+.banner{
+	width: 100%;
 }
 
 .titulo-principal{
-	padding-left: 20px;
+	text-align: center;
+	font-size: 2em; /*fonte base*/
+	margin: 0 0 1em;
+	clear: left; /*limpar o float*/
+	/*color: rgba(0,0,0,0.3); /*os titulos estao opacos*/
+	/*text-shadow: 2px 2px #FF0000;    cria uma sombra na texto*/
 }
 
-.titulo-centralizado{
+/*.titulo-principal:first-letter{  /*apenas a primeira letra do texto em negrito*/
+	/*font-weight: bold;*/
+/*}*/
+
+/*.titulo-principal:before{
+	content: "[ ";
+}
+
+.titulo-principal:after{
+	content: " ]";
+}*/
+
+/*p:first-line{
+	font-style: italic;
+} muda apenas o primeiro paragrafo*/
+
+.principal{
+	padding: 3em 0;
+	background-color: #FEFEFE;
+	width: 940;
+	margin: 0 auto;
+}	
+
+.principal p{
+	margin: 0 0 1em;
+}
+
+.principal strong{
+	font-weight: bold;
+}
+
+.principal em{
+	font-style: italic;
+}
+
+.utensilios{
+	width: 120px;
+	float: left; /*descola o elemento (nesse caso imagem) na lateral e deixa os outros elementos (no caso texto) ao redor. 
+	Tanto o float:left quanto o float: right servem para que o elemento se destaque na tela, deixe de ocupar o espaço em 
+	que estava, para que os outros elementos possam se posicionar ao redor dele */
+	margin: 0 20px 20px 0;
+}
+
+.mapa{
+	padding: 3em 0;
+	background: linear-gradient(#FEFEFE, #888888); /*aplicando gradientes, efeitos bem legais com as cores*/
+}
+
+.mapa p{
+	margin: 0 0 2em;
 	text-align: center;
 }
 
-
-
-p{
-	text-align: center;
-
-}
-
-#missao{
-	font-size: 20px; text-align: center;
-
-}
-
-em strong{
-	color: #FF0000;
-}
-
-.itens{
-	font-style: italic; /*quando usamos classes (class) usamos o '.' no css*/
+.mapa-conteudo{
+	width: 940px;
+	margin: 0 auto;
 }
 
 .beneficios{
-	background: #FFFFFF;
-	padding: 20px;
+	padding: 3em 0;
+	background: #888888;
+	/*box-shadow: inset 0 0  30px #FF0000;    cria um sombra interna em volta de todo o elemento*/
 }
 
-
-ul{
-	display:  inline-block; /*mexeu na posição da figura */
-	vertical-align: top; /*itens da lista ficaram ao topo*/
-	width: 20%;
-	height: 15%;
+.conteudo-beneficios{
+	width: 640;
+	margin: 0 auto;
 }
-.imagembeneficios{
-	width: 50%;
+
+.lista-beneficios{
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.itens{
+	line-height: 1.5;/*altura da linha*/
+}
+
+.itens:before{
+	content: "🟊";
+}
+.itens:first-child{   /*formatando o primeiro item da lista*/
+	font-weight: bold;
+}
+
+.imagem-beneficios{
+	width: 60%;
+	opacity: 1;
+	transition: 400ms;
+	box-shadow: 10px 10px 10px 0 #000000; /*cria uma sombra na imagem, acrescentando mais px positivos ou negativos e possivel
+	criar mais sombras em cima e tbm em baixo*/
+}
+
+.imagem-beneficios:hover{ /*qd passa o mouse em cima da figura da barbearia ela fica normal, qd tira fica opaca*/
+	opacity: 0.3;
+}
+
+.video{
+	width: 560px;
+	margin: 2em auto;
+}
+
+/*main > p{    (assim marca apenas o paragrafo (filho) ligado diretamente ao main (pai)
+	background: red; 
+}
+
+img + p{         (assim destaca apenas o paragrafo que vem imediatamente apos a img)
+	background: blue;
+}
+
+img ~ p{         (esse sobrepoe o anterior, destacando todos os paragrafos)     
+	background: yellow; 
+
+.principal p:not(#missao){ (esse destaca alguns os paragragos das pontas, o primeiro e o ultimo, deixando o meio sem destaque
+	background: orange;
+}	*/
+
+@media screen and (max-width: 480px){
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video{
+		width: auto;
+	}
+}
+
+h1{
+	text-align: center;
+}
+
+nav{
+	position: static;
+}
+ 
+.lista-beneficios, .imagem-beneficios{
+	width: 100%;
 }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contato - Barbearia Alura</title>
+
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="caixa">
+                <h1><img src="modulo3/logo.png" alt="Logo da Barbearia"></h1><!--alt usado semanticamente para deficiente visuais
+                saberem qual a foto esta no site-->
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <form> <!--tag criar formulario-->
+                <label for="nomesobrenome">Nome e sobrenome</label><!--etiqueta para o input--><!--for e id no input e label facilita
+                para o usuario na hora de ele clicar c o mouse fora da caixa do formulario, clicando em cima do 'nome e sobrenome'-->
+                <input type="text" id="nomesobrenome" class="input-padrao" required><!--tag de entreda de dados, qd temos um input
+                e queremos que ele seja preenchido colocamos no input a palavra reservada 'reuqered' que significa 'obrigatório', no 
+                navegador nada muda visualmente, mas quando clicamos pra enviar os dados ele n permite enviar sem que os dados sejam 
+                preenchidos-->
+                
+                <label for="email">E-mail</label>
+                <input type="email" id="email" class="input-padrao" required placeholder="seudominio@com.br"><!--tag de entreda de dados-->
+                <!--tag de entreda, cria a caixa/campo pra digitar-->
+
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" class="input-padrao" required placeholder="(xx) xxxx-xxxxx"><!--tag de entreda de dados-->
+                
+                <label for="mensagem">Mensagem</label>
+                <textarea cols="70" rows="10" id="mensagem" class="input-padrao" required>
+                </textarea><!--acrescenta mais linhas ao formulario--><!--textarea = tag de entreda de dados-->
+                    
+                <fieldset>
+                    <legend>Como prefere nosso contato?</legend>  
+
+                    <label for="radio-email"> <input type="radio"  name="contato" value="email" id="radio-email">Email</label>
+                   <!--A propriedade name só pode ser "preenchida" uma única vez, 
+                        por isso que, quando eu seleciono um dos itens, ele desmarca o outro, mantendo somente um 
+                        selecionado-->
+
+                    <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
+                    
+                    <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+                        
+                </fieldset>
+                <fieldset>
+                    <legend>Qual horário prefere ser atendido?</legend><!--É a tag <legend> que usamos para um título de 
+                        um grupo de campos em qualquer formulário.-->
+                    <select>
+                        <option>Manhã</option>
+                        <option>Tarde</option>
+                        <option>Noite</option>
+                    </select>
+                </fieldset>
+                   
+                <label  class="checkbox"><input type="checkbox">Gostaria de receber nossas novidades por e-mail?</label> 
+
+                <input type="submit" value="Enviar formulário" class="enviar"><!--cria botao 'enviar'-->
+
+            </form>
+            <table><!--tabela-->
+                <thead><!--cabecalho-->
+                    <tr>
+                        <th>Dia</th><!--linha dentro do cabecalho-->
+                        <th>Horário</th>
+                    </tr><!--linha da tabela-->
+                </thead>
+                <tbody><!--corpo da tabela-->
+                    <tr>
+                        <td>Segunda</td><!--celula da tabela-->
+                        <td>8h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Quarta</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Sexta</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+            </tbody>
+            </table>
+        </main>
+
+        <footer>
+            <img src="modulo3/logo-branco.png" alt="Logo da Barbearia">
+            <p class="copyright" id="copyalura">&copy; Copyright Barbearia Alura - 2019</p>
+        </footer>
+    </body>
+</html>
